@@ -32,14 +32,23 @@ const app = new Vue({
     }
   }
 })
+const promiseVue = new Promise( (resolve,reject) => {
+  app.mounted =  () => resolve()
+})
 
 const api = new Api()
-api.getData().then((res) =>{
-  app.tournament = res.tournament
-  app.date = res.date
-  app.firstTeam = res.firstTeam
-  app.secondTeam = res.secondTeam
-  app.k = res.coefficients["0:0"]
-  app.url = res.url
-  app_el.classList.remove('hidden')
+const promiseApi = new Promise( (resolve,reject) => {
+  api.getData().then((res) =>{
+    app.tournament = res.tournament
+    app.date = res.date
+    app.firstTeam = res.firstTeam
+    app.secondTeam = res.secondTeam
+    app.k = res.coefficients["0:0"]
+    app.url = res.url    
+    resolve()
+  })
 })
+
+Promise.all([promiseVue, promiseApi]).then(values => { 
+  app_el.classList.remove('hidden')
+});
