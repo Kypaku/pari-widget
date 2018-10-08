@@ -4,6 +4,9 @@
 body{
   margin: 0;
 }
+.hidden{
+  display: none;
+}
 #app_el{
   width: 300px;
   height: 300px;
