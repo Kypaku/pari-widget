@@ -4,7 +4,7 @@
 body{
   margin: 0;
 }
-.hidden{
+.loading-vue,.loading-api{
   display: none;
 }
 #app_el{

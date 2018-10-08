@@ -30,25 +30,20 @@ const app = new Vue({
         return `${date.getDate()} ${date.toLocaleString('ru', { month:'long' })} ${date.getFullYear()}, ${date.toLocaleString('ru', { hour: 'numeric', minute:'numeric' })}`
       }
     }
+  },
+  mounted:function(){
+    app_el.classList.remove('loading-vue')
   }
 })
-const promiseVue = new Promise( (resolve,reject) => {
-  app.mounted =  () => resolve()
-})
+
 
 const api = new Api()
-const promiseApi = new Promise( (resolve,reject) => {
-  api.getData().then((res) =>{
-    app.tournament = res.tournament
-    app.date = res.date
-    app.firstTeam = res.firstTeam
-    app.secondTeam = res.secondTeam
-    app.k = res.coefficients["0:0"]
-    app.url = res.url    
-    resolve()
-  })
+api.getData().then((res) =>{
+  app.tournament = res.tournament
+  app.date = res.date
+  app.firstTeam = res.firstTeam
+  app.secondTeam = res.secondTeam
+  app.k = res.coefficients["0:0"]
+  app.url = res.url    
+  app_el.classList.remove('loading-api')
 })
-
-Promise.all([promiseVue, promiseApi]).then(values => { 
-  app_el.classList.remove('hidden')
-});
