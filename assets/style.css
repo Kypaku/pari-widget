@@ -1,0 +1,150 @@
+.title, .subtitle{
+  text-align: center
+}
+body{
+  margin: 0;
+}
+#app_el{
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0) 49.9%, #303030 49.9%, #303030 60%, rgba(0, 0, 0, 0) 60%), linear-gradient(45deg, #303030 10%, rgba(0, 0, 0, 0) 10%);
+  background-size: 4px 4px;
+  background-color: #212121;
+}
+.top{
+  height: 55px;
+  border-bottom: 2px solid #171717;
+}    
+.logo{
+  width: 120px;
+  height: 24px;
+  background: url("./img/logo.svg");
+  margin: 16px;
+  float: left;  
+}
+.info{
+  float: right;
+  width: 123px;
+  height: 32px;
+  opacity: 0.5;
+  font-family: Roboto;
+  font-size: 11px;
+  color: #FFFFFF;
+  line-height: 16px;
+  margin-top: 12px;
+  margin-right: 24px;
+}    
+.game{
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 16px;
+  margin-top: 16px;
+}  
+.counter{
+  height: 64px;
+  margin-top: 15px;
+}
+.caption{
+  font-family: Roboto;
+  font-size: 12px;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 16px;
+  margin-top: 12px;  
+}  
+.coefficient{
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 24px;
+  color: #FDD504;
+  text-align: center;
+  line-height: 16px; 
+  margin-top: 12px;
+}
+.button{
+  display: block;
+  width: 220px;
+  height: 40px;
+  margin-top: 16px;
+  margin-left: 40px;
+  background-image: url("./img/button.svg");
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 16px;
+  color: #222222;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.left-buttons{
+  margin-left: 40px;
+  float: left;
+}
+.arrow{
+  width: 28px;
+  height: 28px;
+  background: #171717;
+  border-radius: 3px; 
+  cursor:pointer;
+  background: url(./img/arrow-white.svg) #171717 no-repeat;
+  background-size: initial;
+  background-position: center;
+}
+.arrow.disabled{
+  background: url(./img/arrow-disabled.svg) #171717 no-repeat;
+  background-size: initial;
+  background-position: center;   
+  pointer-events: none;
+}
+.arrow.active:hover{
+  background: url(./img/arrow-black.svg) #FDD504 no-repeat;
+  background-size: initial;
+  background-position: center;  
+}
+.arrow-up{
+  transform: rotate(180deg)
+}
+.arrow-up.active:hover{
+  transform: rotate(0deg)
+}
+.arrow-down{
+  margin-top: 8px;
+}
+.arrow-down.active:hover{
+  transform: rotate(180deg)
+}
+.number{
+  background: #171717;
+  border-radius: 3px;
+  width: 56px;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 65px;
+  color: #FFFFFF;
+  text-align: center; 
+  height: 64px;
+  line-height: 64px;
+}  
+.colon{
+  font-size: 35px;
+  color: #FDD504;  
+  margin: 0 6px;
+  line-height: 64px;
+  font-family: Roboto;
+  font-weight: 700;  
+}   
+.main-counter{
+  margin: 0 15px;
+}
+.main-counter, .main-counter > div{
+  float: left;
+}
+.right-buttons{
+  margin-right: 40px;
+  float: right;
+}

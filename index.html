@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pari-widget</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="./assets/style.css">  
+  </head>
+  
+  <body>
+    <div id="app_el" class="hidden">
+      <div class="top">
+        <div class="logo">
+        </div>
+        <div class="info">
+          {{tournament}}
+          <br>
+          {{formatDate}}
+        </div>
+      </div>
+      <div class="game">
+        {{firstTeam}} - {{secondTeam}}
+      </div>
+      <div class="counter">
+        <div class="left-buttons">
+          <div class="arrow arrow-up" :class="firstScore < 8 ? 'active' : 'disabled'" @click="increase('firstScore')"></div> 
+          <div class="arrow arrow-down" :class="firstScore ? 'active' : 'disabled'"  @click="decrease('firstScore')"></div>         
+        </div>  
+        <div class="main-counter">
+          <div class="number">{{firstScore}}</div> 
+          <div class="colon">:</div> 
+          <div class="number">{{secondScore}}</div>         
+        </div>          
+        <div class="right-buttons">
+          <div class="arrow arrow-up" :class="secondScore < 8 ? 'active' : 'disabled'"  @click="increase('secondScore')"></div> 
+          <div class="arrow arrow-down" :class="secondScore ? 'active' : 'disabled'"  @click="decrease('secondScore')"></div>         
+        </div>         
+      </div>
+      <div class="caption">Поставить на этот счет с коэффициентом</div>
+      <div class="coefficient">{{k}}</div>
+      <a class="button" :href="url + '?score=' + firstScore + ':' + secondScore">
+          Сделать ставку
+      </a>
+    </div>     
+    <script src="./assets/http.min.js"></script>
+    <script src="./dist/bundle.js"></script>
+  </body>
+  
+</html>

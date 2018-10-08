@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="220px" height="40px" viewBox="0 0 220 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>button</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#F9AE00" offset="0%"></stop>
+            <stop stop-color="#FDD504" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="pari-widgets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M9.99376201,0 C9.18562731,0 8.48483992,0.562173913 8.30520634,1.35391304 L0.0437929808,37.876087 C-0.20249981,38.963913 0.621217555,40 1.7327815,40 L210.005372,40 C210.81394,40 211.51516,39.4382609 211.693928,38.6465217 L219.956207,2.12478261 C220.2025,1.03652174 219.378782,0 218.267218,0 L9.99376201,0 Z" id="button" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>
