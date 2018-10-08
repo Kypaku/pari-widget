@@ -12,7 +12,7 @@ export default function(){
   
   this.getData = function(){
     return new Promise((resolve) => {
-      getData('./data/data.json', resolve).then((response) => {
+      getData('../data/data.json', resolve).then((response) => {
       
       for(let key in response){
         this[key] = response[key]
